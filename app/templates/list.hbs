@@ -1,0 +1,27 @@
+<LinkTo @route="list.add">
+  <button class = "button" >ADD</button>
+</LinkTo>
+
+ {{#each this.current.items as |item|}}
+  <article class="listing">
+    <div class="details">
+     <div class="detail description">
+        <span>Description</span> 
+        {{item.description}}   
+    </div>
+     <div class="detail">
+     <LinkTo @route="list.edit">
+  <button class = "button"  {{on "click" (fn this.addItemlist item.id)}}>EDIT</button>
+</LinkTo>
+      <button class="button" {{on "click" (fn this.remove item)}}>REMOVE</button>
+    </div>
+
+  
+
+   
+      
+  
+    </div>
+  </article>
+{{/each}}
+{{outlet}}
