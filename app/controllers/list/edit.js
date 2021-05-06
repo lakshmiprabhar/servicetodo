@@ -9,9 +9,9 @@ show(item)
 {
 console.log(this.get("current").items[item-1]);
 set(this.get("current").items[item-1],"description",this.get('name'));
+
+
+
 }
-@action submit() {
-	
-	this.transitionToRoute('list');
-	}
+
 }

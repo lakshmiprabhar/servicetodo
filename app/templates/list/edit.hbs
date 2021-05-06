@@ -1,5 +1,10 @@
-Enter Name : {{input type = "text" placeholder = "Enter the name" value = name}}
+<div class="ml-2 ">
+{{textarea class="label mt-3 h5 text-dark" value = name placeholder = "Edit here..."}}
+
 <div class="detail">
-<button class="button" {{on "click" (fn this.show this.current.count)}}>EDIT</button>
-<button {{action "submit"}}>submit</button>
+<div class=" ml-4 mr-4  btn btn-info" {{on "click" (fn this.show this.current.count)}}><h4>Submit</h4></div>
+
+
 </div>
+</div>
+
